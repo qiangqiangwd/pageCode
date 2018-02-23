@@ -44,10 +44,25 @@ export default {
     width: 1200px;
     margin: 0 auto;
   }
+  .t-c{
+    text-align: center;
+  }
   .f-r{
     float: right;
   }
   .f-l{
     float: left;
+  }
+  .r-c{
+    color: #F56C6C!important;
+  }
+  .g-c{
+    color: #67C23A!important;
+  }
+  .b-c{
+    color: #409EFF!important;
+  }
+  .o-c{
+    color: #E6A23C!important;
   }
 </style>
