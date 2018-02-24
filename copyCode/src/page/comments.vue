@@ -1,7 +1,7 @@
 <template>
     <div class="comments">
       <div class="title">
-        评论区：
+        许愿墙：
       </div>
       <!--输入框部分-->
       <div class="writeIn">
@@ -46,6 +46,23 @@
           return {
             comments : ''
           }
+      },
+      mounted(){
+        const _this = this;
+        this.$ajax({
+          url: '/server/select.php'
+          ,data: {
+            selectInf:'desireWallInf'
+          }
+          ,success(res){
+            res = JSON.parse(res);
+            if(res.code == 1){
+              console.log(res);
+            }else{
+              _this.$message.error(res.msg);
+            }
+          }
+        });
       }
     }
 </script>
