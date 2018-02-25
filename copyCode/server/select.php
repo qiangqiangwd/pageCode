@@ -29,6 +29,16 @@
 	   }else{
 		   $arr = array('code' => 1, 'msg' => '未拥有该用户名！', 'data' => $list);
 	   }
+ }else if($selectInf == "desireWallInf"){
+	 
+	 	//获取许愿墙信息部分
+	 	$list = $db->getAll("SELECT * FROM desireWall");
+		//code：成功为1  msg:返回的信息  data:返回的数据（参数）
+	   if($list){
+		   $arr = array('code' => 1, 'msg' => '返回成功！', 'data' => $list);
+	   }else{
+		   $arr = array('code' => 0, 'msg' => '返回失败！', 'data' => null);
+	   }
  }
  
  echo json_encode($arr); //返回结果

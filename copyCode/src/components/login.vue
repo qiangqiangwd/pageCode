@@ -172,9 +172,8 @@
                       type: 'success',
                       duration:1500,
                       onClose(){
-                        _this.$router.push('/'); //跳转回首页
                         _this.$store.state.isLoginOrNot = res.data;  //判断已经登录（将用户信息放入这条信息中）
-                        _this.$cookie.setCookie('userId',res.data.userId,2);
+                        _this.$cookie.setCookie('userId',res.data.userId,2); //将userId保存进cookie中
                         _this.$store.state.isShowLoginBox = false;  //关闭登录框
                       }
                     });
