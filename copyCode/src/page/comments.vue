@@ -89,7 +89,27 @@
             _this.$message.error('内容不能为空！');
             this.sendComment = '';
           }
+<<<<<<< HEAD
         }
+=======
+      },
+      mounted(){
+        const _this = this;
+        this.$ajax({
+          url: '/server/select.php'
+          ,data: {
+            selectInf:'desireWallInf'
+          }
+          ,success(res){
+            res = JSON.parse(res);
+            if(res.code == 1){
+              console.log(res);
+            }else{
+              _this.$message.error(res.msg);
+            }
+          }
+        });
+>>>>>>> c22d92d9d9a24f4e98e71bbbf046206ad7f1bed5
       }
     }
 </script>
